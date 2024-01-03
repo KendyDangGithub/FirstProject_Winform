@@ -16,5 +16,14 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void buttonSignIn_Click(object sender, EventArgs e)
+        {
+            fHome fhome = new fHome();
+            fLogin flogin = new fLogin();
+            fhome.Show();
+
+
+        }
     }
 }
