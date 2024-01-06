@@ -30,46 +30,58 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.ucSignIn1 = new GUI.UserControls.UCSignIn();
+            this.panelWelcome = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonSignIn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSignUp = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2.SuspendLayout();
+            this.pictureBoxLogin = new System.Windows.Forms.PictureBox();
+            this.panelLogin = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panelWelcome.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(631, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(3, 681);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(47, 51);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(455, 130);
-            this.panel2.TabIndex = 4;
+            this.panel4.Controls.Add(this.ucSignIn1);
+            this.panel4.Location = new System.Drawing.Point(0, 51);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(630, 630);
+            this.panel4.TabIndex = 8;
             // 
-            // label1
+            // ucSignIn1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome Back!";
+            this.ucSignIn1.BackColor = System.Drawing.Color.White;
+            this.ucSignIn1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucSignIn1.Location = new System.Drawing.Point(122, 264);
+            this.ucSignIn1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucSignIn1.Name = "ucSignIn1";
+            this.ucSignIn1.Size = new System.Drawing.Size(628, 625);
+            this.ucSignIn1.TabIndex = 0;
+            // 
+            // panelWelcome
+            // 
+            this.panelWelcome.Controls.Add(this.label2);
+            this.panelWelcome.Controls.Add(this.label1);
+            this.panelWelcome.Location = new System.Drawing.Point(47, 51);
+            this.panelWelcome.Name = "panelWelcome";
+            this.panelWelcome.Size = new System.Drawing.Size(455, 130);
+            this.panelWelcome.TabIndex = 4;
             // 
             // label2
             // 
@@ -82,6 +94,16 @@
             this.label2.Text = "We Are So Happy To Have You Here. \r\nIt\'s Great To See You Again. \r\nWe Hope You Ha" +
     "d A Safe And Enjoyable Time Away.";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(257, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome Back!";
+            // 
             // buttonSignIn
             // 
             this.buttonSignIn.BackColor = System.Drawing.SystemColors.Highlight;
@@ -89,7 +111,7 @@
             this.buttonSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignIn.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignIn.ForeColor = System.Drawing.Color.White;
-            this.buttonSignIn.Location = new System.Drawing.Point(794, 5);
+            this.buttonSignIn.Location = new System.Drawing.Point(798, 5);
             this.buttonSignIn.Name = "buttonSignIn";
             this.buttonSignIn.Size = new System.Drawing.Size(150, 50);
             this.buttonSignIn.TabIndex = 5;
@@ -97,49 +119,48 @@
             this.buttonSignIn.UseVisualStyleBackColor = false;
             this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
             // 
-            // button1
+            // buttonSignUp
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(944, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 50);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Sign In";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonSignUp.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonSignUp.FlatAppearance.BorderSize = 0;
+            this.buttonSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSignUp.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSignUp.ForeColor = System.Drawing.Color.White;
+            this.buttonSignUp.Location = new System.Drawing.Point(948, 5);
+            this.buttonSignUp.Name = "buttonSignUp";
+            this.buttonSignUp.Size = new System.Drawing.Size(150, 50);
+            this.buttonSignUp.TabIndex = 6;
+            this.buttonSignUp.Text = "Sign Up";
+            this.buttonSignUp.UseVisualStyleBackColor = false;
+            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.panelWelcome);
+            this.panel3.Controls.Add(this.pictureBoxLogin);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(630, 681);
             this.panel3.TabIndex = 7;
             // 
-            // pictureBox3
+            // pictureBoxLogin
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 51);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(630, 630);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBoxLogin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogin.Image")));
+            this.pictureBoxLogin.Location = new System.Drawing.Point(0, 51);
+            this.pictureBoxLogin.Name = "pictureBoxLogin";
+            this.pictureBoxLogin.Size = new System.Drawing.Size(630, 630);
+            this.pictureBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxLogin.TabIndex = 3;
+            this.pictureBoxLogin.TabStop = false;
             // 
-            // pictureBox2
+            // panelLogin
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Location = new System.Drawing.Point(634, 56);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(628, 625);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.panelLogin.Location = new System.Drawing.Point(635, 51);
+            this.panelLogin.Name = "panelLogin";
+            this.panelLogin.Size = new System.Drawing.Size(628, 630);
+            this.panelLogin.TabIndex = 8;
             // 
             // fLogin
             // 
@@ -147,35 +168,38 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonSignIn);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelLogin);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.buttonSignUp);
+            this.Controls.Add(this.buttonSignIn);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Text = "Quản Lý Sinh Viên Khoa CNTT";
+            this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panelWelcome.ResumeLayout(false);
+            this.panelWelcome.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBoxLogin;
+        private System.Windows.Forms.Panel panelWelcome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSignIn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSignUp;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private UserControls.UCSignIn ucSignIn1;
+        public System.Windows.Forms.Panel panelLogin;
     }
 }
 

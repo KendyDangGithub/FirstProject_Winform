@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2622\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2622\build\Xamarin.Forms.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,11 +59,53 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaoCao.Designer.cs">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fChuyenNganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChuyenNganh.Designer.cs">
+      <DependentUpon>fChuyenNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDiem.Designer.cs">
+      <DependentUpon>fDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fForgotPassword.Designer.cs">
+      <DependentUpon>fForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHocPhan.Designer.cs">
+      <DependentUpon>fHocPhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="fHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fHome.Designer.cs">
       <DependentUpon>fHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHoSoGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHoSoGiangVien.Designer.cs">
+      <DependentUpon>fHoSoGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHoSoSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHoSoSinhVien.Designer.cs">
+      <DependentUpon>fHoSoSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -68,19 +113,62 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLopHoc.Designer.cs">
+      <DependentUpon>fLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSignIn.Designer.cs">
+      <DependentUpon>fSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSignUp.Designer.cs">
+      <DependentUpon>fSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongKe.Designer.cs">
+      <DependentUpon>fThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\KDCircularPictureBox.cs">
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="CustomControl\KDCircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserControls\KDComboBox.cs">
+    <Compile Include="CustomControl\KDComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\KDButton.cs">
+    <Compile Include="CustomControl\KDButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserControls\KDDateTimePicker.cs">
+    <Compile Include="CustomControl\KDDateTimePicker.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\KDTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\KDTextBox.Designer.cs">
+      <DependentUpon>KDTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCForgotPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCForgotPassword.Designer.cs">
+      <DependentUpon>UCForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCSignIn.cs">
       <SubType>UserControl</SubType>
@@ -94,11 +182,44 @@
     <Compile Include="UserControls\UCSignUp.Designer.cs">
       <DependentUpon>UCSignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fBaoCao.resx">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChuyenNganh.resx">
+      <DependentUpon>fChuyenNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDiem.resx">
+      <DependentUpon>fDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fForgotPassword.resx">
+      <DependentUpon>fForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHocPhan.resx">
+      <DependentUpon>fHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fHome.resx">
       <DependentUpon>fHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fHoSoGiangVien.resx">
+      <DependentUpon>fHoSoGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHoSoSinhVien.resx">
+      <DependentUpon>fHoSoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLopHoc.resx">
+      <DependentUpon>fLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSignIn.resx">
+      <DependentUpon>fSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSignUp.resx">
+      <DependentUpon>fSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongKe.resx">
+      <DependentUpon>fThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +231,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="CustomControl\KDTextBox.resx">
+      <DependentUpon>KDTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCForgotPassword.resx">
+      <DependentUpon>UCForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCSignIn.resx">
       <DependentUpon>UCSignIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,5 +269,23 @@
   <ItemGroup>
     <None Include="Resources\calendarWhite.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{9bd50cc3-f439-446f-a0f8-18dadc395786}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{734eb425-8637-467c-8d5c-906e89ca1ba0}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.5.0.0.2622\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.5.0.0.2622\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.5.0.0.2622\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.5.0.0.2622\build\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2622\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2622\build\Xamarin.Forms.targets')" />
 </Project>

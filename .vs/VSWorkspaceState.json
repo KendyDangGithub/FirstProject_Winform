@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GUI"
+    "\\DAL",
+    "\\GUI",
+    "\\GUI\\UserControls"
   ],
-  "SelectedNode": "\\GUI\\fLogin.cs",
+  "SelectedNode": "\\GUI\\fHome.cs",
   "PreviewInSolutionExplorer": false
 }
