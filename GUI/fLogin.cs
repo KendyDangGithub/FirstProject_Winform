@@ -18,6 +18,7 @@ namespace GUI
         public fSignIn formSignIn;
         public fSignUp formSignUp;
         public fForgotPassword formForgotPassword;
+        fHome formHome;
 
         public fLogin()
         {
@@ -37,6 +38,8 @@ namespace GUI
             formSignUp.TopLevel = false;
             formSignUp.Parent = panelLogin;
             formSignUp.Hide(); // Ẩn Form SignUp ban đầu
+
+            formHome = new fHome();
 
         }
 
@@ -80,12 +83,23 @@ namespace GUI
 
         private void FormSignIn_LoginRequested(object sender, EventArgs e)
         {
-            buttonSignIn.BackColor = SystemColors.Highlight;
-            buttonSignUp.BackColor = SystemColors.ActiveBorder;
-            // Khi nhận được yêu cầu từ FormSignIn, ẩn FormSignIn và hiển thị fHome
-            fHome fHome = new fHome();
+
             this.Hide();
-            fHome.Show();
+            formHome.Show();
+        }
+
+        private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn đóng ứng dụng?", "Xác nhận đóng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result != DialogResult.OK)
+            {
+                e.Cancel = true; // Ngăn chặn đóng form nếu người dùng chọn Cancel
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }

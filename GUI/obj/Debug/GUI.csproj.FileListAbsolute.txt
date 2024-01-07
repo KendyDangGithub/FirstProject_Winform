@@ -17,9 +17,7 @@ C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\obj\Debug\GUI.fHoSoGiangVien.resources
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\obj\Debug\GUI.fHoSoSinhVien.resources
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\bin\Debug\BUS.dll
-C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\bin\Debug\DTO.dll
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\bin\Debug\BUS.pdb
-C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\bin\Debug\DTO.pdb
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\bin\Debug\DAL.dll
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\bin\Debug\DAL.pdb
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\GUI\obj\Debug\GUI.UserControls.UCHome.resources

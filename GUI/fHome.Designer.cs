@@ -34,6 +34,7 @@
             this.ButtonGiangVien = new FontAwesome.Sharp.IconButton();
             this.flowLayoutPanelQuanLy = new System.Windows.Forms.FlowLayoutPanel();
             this.ButtonDiem = new FontAwesome.Sharp.IconButton();
+            this.ButtonLopHoc = new FontAwesome.Sharp.IconButton();
             this.ButtonHocPhan = new FontAwesome.Sharp.IconButton();
             this.ButtonChuyenNganh = new FontAwesome.Sharp.IconButton();
             this.panelHeader = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.ButtonBaoCao = new FontAwesome.Sharp.IconButton();
             this.panelContent = new System.Windows.Forms.Panel();
             this.pictureBoxContent = new System.Windows.Forms.PictureBox();
-            this.ButtonLopHoc = new FontAwesome.Sharp.IconButton();
             this.flowLayoutPanelHoSo.SuspendLayout();
             this.flowLayoutPanelQuanLy.SuspendLayout();
             this.panelHeader.SuspendLayout();
@@ -156,6 +156,26 @@
             this.ButtonDiem.MouseEnter += new System.EventHandler(this.ButtonDiem_MouseEnter);
             this.ButtonDiem.MouseLeave += new System.EventHandler(this.ButtonDiem_MouseLeave);
             // 
+            // ButtonLopHoc
+            // 
+            this.ButtonLopHoc.BackColor = System.Drawing.Color.Silver;
+            this.ButtonLopHoc.FlatAppearance.BorderSize = 0;
+            this.ButtonLopHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonLopHoc.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonLopHoc.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ButtonLopHoc.IconColor = System.Drawing.Color.Black;
+            this.ButtonLopHoc.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonLopHoc.Location = new System.Drawing.Point(0, 55);
+            this.ButtonLopHoc.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonLopHoc.Name = "ButtonLopHoc";
+            this.ButtonLopHoc.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.ButtonLopHoc.Size = new System.Drawing.Size(200, 55);
+            this.ButtonLopHoc.TabIndex = 5;
+            this.ButtonLopHoc.Text = "Lớp Học";
+            this.ButtonLopHoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonLopHoc.UseVisualStyleBackColor = false;
+            this.ButtonLopHoc.Click += new System.EventHandler(this.ButtonLopHoc_Click);
+            // 
             // ButtonHocPhan
             // 
             this.ButtonHocPhan.BackColor = System.Drawing.Color.Silver;
@@ -246,6 +266,7 @@
             this.iconButton1.Text = "Thoát";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // linkLabel1
             // 
@@ -465,26 +486,6 @@
             this.pictureBoxContent.TabIndex = 0;
             this.pictureBoxContent.TabStop = false;
             // 
-            // ButtonLopHoc
-            // 
-            this.ButtonLopHoc.BackColor = System.Drawing.Color.Silver;
-            this.ButtonLopHoc.FlatAppearance.BorderSize = 0;
-            this.ButtonLopHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonLopHoc.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonLopHoc.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ButtonLopHoc.IconColor = System.Drawing.Color.Black;
-            this.ButtonLopHoc.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonLopHoc.Location = new System.Drawing.Point(0, 55);
-            this.ButtonLopHoc.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonLopHoc.Name = "ButtonLopHoc";
-            this.ButtonLopHoc.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.ButtonLopHoc.Size = new System.Drawing.Size(200, 55);
-            this.ButtonLopHoc.TabIndex = 5;
-            this.ButtonLopHoc.Text = "Lớp Học";
-            this.ButtonLopHoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonLopHoc.UseVisualStyleBackColor = false;
-            this.ButtonLopHoc.Click += new System.EventHandler(this.ButtonLopHoc_Click);
-            // 
             // fHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -500,6 +501,7 @@
             this.Name = "fHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sinh Viên Khoa CNTT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fHome_FormClosing);
             this.flowLayoutPanelHoSo.ResumeLayout(false);
             this.flowLayoutPanelQuanLy.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Shell;
 
@@ -17,8 +18,11 @@ namespace GUI
         public fHome()
         {
             InitializeComponent();
+
             hideSubMenu();
             ShowUserControls(new UCHome());
+
+
         }
         private void hideSubMenu()
         {
@@ -62,10 +66,10 @@ namespace GUI
             }
             activeForm = childForm;
             childForm.TopLevel = false;
-            //childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             panelContent.Controls.Add(childForm);
-            //panelContent.Tag = childForm;
+            panelContent.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -252,6 +256,32 @@ namespace GUI
             labelTitle.Text = ButtonQuanLy.Text + " " + ButtonLopHoc.Text;
             CenterLabel(labelTitle);
             openChildFormInPanel(new fChuyenNganh());
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn Có Chắc Chắn Muốn Đăng Xuất Không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if(result == DialogResult.OK)
+            {
+                this.Hide();
+
+                fLogin formLogin = new fLogin();
+                formLogin.Show();
+            }
+        }
+
+        private void fHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn đóng ứng dụng?", "Xác nhận đóng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result != DialogResult.OK)
+            {
+                e.Cancel = true; // Ngăn chặn đóng form nếu người dùng chọn Cancel
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }

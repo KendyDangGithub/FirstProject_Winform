@@ -36,28 +36,28 @@
             this.buttonUndo1 = new System.Windows.Forms.Button();
             this.buttonUndo2 = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.groupBoxSearch = new System.Windows.Forms.GroupBox();
-            this.ButtonSearch = new FontAwesome.Sharp.IconButton();
-            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
-            this.comboBoxSearch = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelMaSV = new System.Windows.Forms.Label();
-            this.textBoxMaSV = new System.Windows.Forms.TextBox();
-            this.labelMonHoc = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxHocKy = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxDiemThi = new System.Windows.Forms.TextBox();
-            this.comboBoxMonHoc = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ButtonSort = new FontAwesome.Sharp.IconButton();
-            this.comboBoxDiem = new System.Windows.Forms.ComboBox();
             this.comboBoxSort = new System.Windows.Forms.ComboBox();
+            this.comboBoxDiem = new System.Windows.Forms.ComboBox();
+            this.ButtonSort = new FontAwesome.Sharp.IconButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxMonHoc = new System.Windows.Forms.ComboBox();
+            this.textBoxDiemThi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxHocKy = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelMonHoc = new System.Windows.Forms.Label();
+            this.textBoxMaSV = new System.Windows.Forms.TextBox();
+            this.labelMaSV = new System.Windows.Forms.Label();
+            this.groupBoxSearch = new System.Windows.Forms.GroupBox();
+            this.comboBoxSearch = new System.Windows.Forms.ComboBox();
+            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
+            this.ButtonSearch = new FontAwesome.Sharp.IconButton();
             this.panelFooter.SuspendLayout();
             this.panelHeader.SuspendLayout();
-            this.groupBoxSearch.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBoxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelFooter
@@ -155,55 +155,56 @@
             this.panelHeader.Size = new System.Drawing.Size(428, 731);
             this.panelHeader.TabIndex = 3;
             // 
-            // groupBoxSearch
+            // groupBox2
             // 
-            this.groupBoxSearch.Controls.Add(this.comboBoxSearch);
-            this.groupBoxSearch.Controls.Add(this.comboBoxFilter);
-            this.groupBoxSearch.Controls.Add(this.ButtonSearch);
-            this.groupBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxSearch.Location = new System.Drawing.Point(45, 276);
-            this.groupBoxSearch.Name = "groupBoxSearch";
-            this.groupBoxSearch.Size = new System.Drawing.Size(325, 186);
-            this.groupBoxSearch.TabIndex = 2;
-            this.groupBoxSearch.TabStop = false;
-            this.groupBoxSearch.Text = "Tìm Kiếm";
+            this.groupBox2.Controls.Add(this.comboBoxSort);
+            this.groupBox2.Controls.Add(this.comboBoxDiem);
+            this.groupBox2.Controls.Add(this.ButtonSort);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(45, 487);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(325, 213);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sắp Xếp";
             // 
-            // ButtonSearch
+            // comboBoxSort
             // 
-            this.ButtonSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.ButtonSearch.IconColor = System.Drawing.Color.Black;
-            this.ButtonSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonSearch.IconSize = 45;
-            this.ButtonSearch.Location = new System.Drawing.Point(68, 112);
-            this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(180, 45);
-            this.ButtonSearch.TabIndex = 3;
-            this.ButtonSearch.Text = "Tìm Kiếm";
-            this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ButtonSearch.UseVisualStyleBackColor = true;
+            this.comboBoxSort.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSort.FormattingEnabled = true;
+            this.comboBoxSort.Items.AddRange(new object[] {
+            "Tăng Dần",
+            "Giảm Dần"});
+            this.comboBoxSort.Location = new System.Drawing.Point(68, 82);
+            this.comboBoxSort.Name = "comboBoxSort";
+            this.comboBoxSort.Size = new System.Drawing.Size(180, 29);
+            this.comboBoxSort.TabIndex = 6;
+            this.comboBoxSort.Text = "Tăng Dần";
             // 
-            // comboBoxFilter
+            // comboBoxDiem
             // 
-            this.comboBoxFilter.Enabled = false;
-            this.comboBoxFilter.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFilter.FormattingEnabled = true;
-            this.comboBoxFilter.Location = new System.Drawing.Point(68, 36);
-            this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(180, 29);
-            this.comboBoxFilter.TabIndex = 6;
-            this.comboBoxFilter.Text = "Môn Học";
+            this.comboBoxDiem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxDiem.FormattingEnabled = true;
+            this.comboBoxDiem.Location = new System.Drawing.Point(68, 46);
+            this.comboBoxDiem.Name = "comboBoxDiem";
+            this.comboBoxDiem.Size = new System.Drawing.Size(180, 29);
+            this.comboBoxDiem.TabIndex = 6;
+            this.comboBoxDiem.Text = "Điểm";
             // 
-            // comboBoxSearch
+            // ButtonSort
             // 
-            this.comboBoxSearch.Enabled = false;
-            this.comboBoxSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxSearch.FormattingEnabled = true;
-            this.comboBoxSearch.Location = new System.Drawing.Point(68, 72);
-            this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(180, 29);
-            this.comboBoxSearch.TabIndex = 6;
-            this.comboBoxSearch.Text = "WindowsForm";
+            this.ButtonSort.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.ButtonSort.IconColor = System.Drawing.Color.Black;
+            this.ButtonSort.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonSort.IconSize = 45;
+            this.ButtonSort.Location = new System.Drawing.Point(68, 122);
+            this.ButtonSort.Name = "ButtonSort";
+            this.ButtonSort.Size = new System.Drawing.Size(180, 45);
+            this.ButtonSort.TabIndex = 3;
+            this.ButtonSort.Text = "Sắp Xếp";
+            this.ButtonSort.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonSort.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -223,49 +224,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Điểm";
             // 
-            // labelMaSV
+            // comboBoxMonHoc
             // 
-            this.labelMaSV.AutoSize = true;
-            this.labelMaSV.Location = new System.Drawing.Point(44, 39);
-            this.labelMaSV.Name = "labelMaSV";
-            this.labelMaSV.Size = new System.Drawing.Size(56, 19);
-            this.labelMaSV.TabIndex = 2;
-            this.labelMaSV.Text = "Mã SV:";
-            this.labelMaSV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboBoxMonHoc.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMonHoc.FormattingEnabled = true;
+            this.comboBoxMonHoc.Location = new System.Drawing.Point(130, 71);
+            this.comboBoxMonHoc.Name = "comboBoxMonHoc";
+            this.comboBoxMonHoc.Size = new System.Drawing.Size(144, 29);
+            this.comboBoxMonHoc.TabIndex = 6;
+            this.comboBoxMonHoc.Text = "WindowsForm";
             // 
-            // textBoxMaSV
+            // textBoxDiemThi
             // 
-            this.textBoxMaSV.Location = new System.Drawing.Point(130, 36);
-            this.textBoxMaSV.Name = "textBoxMaSV";
-            this.textBoxMaSV.Size = new System.Drawing.Size(144, 26);
-            this.textBoxMaSV.TabIndex = 3;
-            // 
-            // labelMonHoc
-            // 
-            this.labelMonHoc.AutoSize = true;
-            this.labelMonHoc.Location = new System.Drawing.Point(44, 75);
-            this.labelMonHoc.Name = "labelMonHoc";
-            this.labelMonHoc.Size = new System.Drawing.Size(71, 19);
-            this.labelMonHoc.TabIndex = 2;
-            this.labelMonHoc.Text = "Môn Học:";
-            this.labelMonHoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Học Kỳ: ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBoxHocKy
-            // 
-            this.textBoxHocKy.Location = new System.Drawing.Point(130, 109);
-            this.textBoxHocKy.Name = "textBoxHocKy";
-            this.textBoxHocKy.Size = new System.Drawing.Size(144, 26);
-            this.textBoxHocKy.TabIndex = 3;
+            this.textBoxDiemThi.Location = new System.Drawing.Point(130, 145);
+            this.textBoxDiemThi.Name = "textBoxDiemThi";
+            this.textBoxDiemThi.Size = new System.Drawing.Size(144, 26);
+            this.textBoxDiemThi.TabIndex = 3;
             // 
             // label1
             // 
@@ -277,76 +251,97 @@
             this.label1.Text = "Điểm Thi:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBoxDiemThi
+            // textBoxHocKy
             // 
-            this.textBoxDiemThi.Location = new System.Drawing.Point(130, 145);
-            this.textBoxDiemThi.Name = "textBoxDiemThi";
-            this.textBoxDiemThi.Size = new System.Drawing.Size(144, 26);
-            this.textBoxDiemThi.TabIndex = 3;
+            this.textBoxHocKy.Location = new System.Drawing.Point(130, 109);
+            this.textBoxHocKy.Name = "textBoxHocKy";
+            this.textBoxHocKy.Size = new System.Drawing.Size(144, 26);
+            this.textBoxHocKy.TabIndex = 3;
             // 
-            // comboBoxMonHoc
+            // label2
             // 
-            this.comboBoxMonHoc.Enabled = false;
-            this.comboBoxMonHoc.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxMonHoc.FormattingEnabled = true;
-            this.comboBoxMonHoc.Location = new System.Drawing.Point(130, 71);
-            this.comboBoxMonHoc.Name = "comboBoxMonHoc";
-            this.comboBoxMonHoc.Size = new System.Drawing.Size(144, 29);
-            this.comboBoxMonHoc.TabIndex = 6;
-            this.comboBoxMonHoc.Text = "WindowsForm";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(44, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Học Kỳ: ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // groupBox2
+            // labelMonHoc
             // 
-            this.groupBox2.Controls.Add(this.comboBoxSort);
-            this.groupBox2.Controls.Add(this.comboBoxDiem);
-            this.groupBox2.Controls.Add(this.ButtonSort);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(45, 487);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(325, 213);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Sắp Xếp";
+            this.labelMonHoc.AutoSize = true;
+            this.labelMonHoc.Location = new System.Drawing.Point(44, 75);
+            this.labelMonHoc.Name = "labelMonHoc";
+            this.labelMonHoc.Size = new System.Drawing.Size(71, 19);
+            this.labelMonHoc.TabIndex = 2;
+            this.labelMonHoc.Text = "Môn Học:";
+            this.labelMonHoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ButtonSort
+            // textBoxMaSV
             // 
-            this.ButtonSort.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.ButtonSort.IconColor = System.Drawing.Color.Black;
-            this.ButtonSort.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonSort.IconSize = 45;
-            this.ButtonSort.Location = new System.Drawing.Point(68, 122);
-            this.ButtonSort.Name = "ButtonSort";
-            this.ButtonSort.Size = new System.Drawing.Size(180, 45);
-            this.ButtonSort.TabIndex = 3;
-            this.ButtonSort.Text = "Sắp Xếp";
-            this.ButtonSort.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ButtonSort.UseVisualStyleBackColor = true;
+            this.textBoxMaSV.Location = new System.Drawing.Point(130, 36);
+            this.textBoxMaSV.Name = "textBoxMaSV";
+            this.textBoxMaSV.Size = new System.Drawing.Size(144, 26);
+            this.textBoxMaSV.TabIndex = 3;
             // 
-            // comboBoxDiem
+            // labelMaSV
             // 
-            this.comboBoxDiem.Enabled = false;
-            this.comboBoxDiem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxDiem.FormattingEnabled = true;
-            this.comboBoxDiem.Location = new System.Drawing.Point(68, 46);
-            this.comboBoxDiem.Name = "comboBoxDiem";
-            this.comboBoxDiem.Size = new System.Drawing.Size(180, 29);
-            this.comboBoxDiem.TabIndex = 6;
-            this.comboBoxDiem.Text = "Điểm";
+            this.labelMaSV.AutoSize = true;
+            this.labelMaSV.Location = new System.Drawing.Point(44, 39);
+            this.labelMaSV.Name = "labelMaSV";
+            this.labelMaSV.Size = new System.Drawing.Size(56, 19);
+            this.labelMaSV.TabIndex = 2;
+            this.labelMaSV.Text = "Mã SV:";
+            this.labelMaSV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBoxSort
+            // groupBoxSearch
             // 
-            this.comboBoxSort.Enabled = false;
-            this.comboBoxSort.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxSort.FormattingEnabled = true;
-            this.comboBoxSort.Items.AddRange(new object[] {
-            "Tăng Dần",
-            "Giảm Dần"});
-            this.comboBoxSort.Location = new System.Drawing.Point(68, 82);
-            this.comboBoxSort.Name = "comboBoxSort";
-            this.comboBoxSort.Size = new System.Drawing.Size(180, 29);
-            this.comboBoxSort.TabIndex = 6;
-            this.comboBoxSort.Text = "Tăng Dần";
+            this.groupBoxSearch.Controls.Add(this.comboBoxSearch);
+            this.groupBoxSearch.Controls.Add(this.comboBoxFilter);
+            this.groupBoxSearch.Controls.Add(this.ButtonSearch);
+            this.groupBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxSearch.Location = new System.Drawing.Point(45, 276);
+            this.groupBoxSearch.Name = "groupBoxSearch";
+            this.groupBoxSearch.Size = new System.Drawing.Size(325, 186);
+            this.groupBoxSearch.TabIndex = 2;
+            this.groupBoxSearch.TabStop = false;
+            this.groupBoxSearch.Text = "Tìm Kiếm";
+            // 
+            // comboBoxSearch
+            // 
+            this.comboBoxSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSearch.FormattingEnabled = true;
+            this.comboBoxSearch.Location = new System.Drawing.Point(68, 72);
+            this.comboBoxSearch.Name = "comboBoxSearch";
+            this.comboBoxSearch.Size = new System.Drawing.Size(180, 29);
+            this.comboBoxSearch.TabIndex = 6;
+            this.comboBoxSearch.Text = "WindowsForm";
+            // 
+            // comboBoxFilter
+            // 
+            this.comboBoxFilter.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFilter.FormattingEnabled = true;
+            this.comboBoxFilter.Location = new System.Drawing.Point(68, 36);
+            this.comboBoxFilter.Name = "comboBoxFilter";
+            this.comboBoxFilter.Size = new System.Drawing.Size(180, 29);
+            this.comboBoxFilter.TabIndex = 6;
+            this.comboBoxFilter.Text = "Môn Học";
+            // 
+            // ButtonSearch
+            // 
+            this.ButtonSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.ButtonSearch.IconColor = System.Drawing.Color.Black;
+            this.ButtonSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonSearch.IconSize = 45;
+            this.ButtonSearch.Location = new System.Drawing.Point(68, 112);
+            this.ButtonSearch.Name = "ButtonSearch";
+            this.ButtonSearch.Size = new System.Drawing.Size(180, 45);
+            this.ButtonSearch.TabIndex = 3;
+            this.ButtonSearch.Text = "Tìm Kiếm";
+            this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonSearch.UseVisualStyleBackColor = true;
             // 
             // fDiem
             // 
@@ -361,10 +356,10 @@
             this.panelFooter.ResumeLayout(false);
             this.panelFooter.PerformLayout();
             this.panelHeader.ResumeLayout(false);
-            this.groupBoxSearch.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.groupBoxSearch.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

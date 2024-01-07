@@ -72,6 +72,7 @@
             this.buttonSubmit.TabIndex = 79;
             this.buttonSubmit.Text = "SUBMIT";
             this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // TextBoxPhoneNumber
             // 
@@ -160,7 +161,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TextBoxUsername);
             this.Name = "fForgotPassword";
-            this.Text = "fForgotPassword";
+            this.Text = "Forgot Password";
             this.ResumeLayout(false);
             this.PerformLayout();
 

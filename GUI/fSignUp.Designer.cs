@@ -54,6 +54,7 @@
             this.buttonSubmit.TabIndex = 70;
             this.buttonSubmit.Text = "SUBMIT";
             this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // linkLabelLoginHere
             // 

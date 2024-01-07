@@ -102,10 +102,11 @@
             this.checkBoxRemember.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxRemember.Location = new System.Drawing.Point(118, 342);
             this.checkBoxRemember.Name = "checkBoxRemember";
-            this.checkBoxRemember.Size = new System.Drawing.Size(114, 21);
+            this.checkBoxRemember.Size = new System.Drawing.Size(154, 21);
             this.checkBoxRemember.TabIndex = 50;
-            this.checkBoxRemember.Text = "Remember me";
+            this.checkBoxRemember.Text = "Show/Hide Password";
             this.checkBoxRemember.UseVisualStyleBackColor = true;
+            this.checkBoxRemember.CheckedChanged += new System.EventHandler(this.checkBoxRemember_CheckedChanged);
             // 
             // textBoxPassword
             // 
@@ -117,6 +118,8 @@
             this.textBoxPassword.Size = new System.Drawing.Size(259, 23);
             this.textBoxPassword.TabIndex = 49;
             this.textBoxPassword.Text = "Password";
+            this.textBoxPassword.Click += new System.EventHandler(this.textBoxPassword_Click);
+            this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
             // textBoxUserName
             // 
@@ -127,7 +130,9 @@
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(259, 23);
             this.textBoxUserName.TabIndex = 48;
-            this.textBoxUserName.Text = "UserName";
+            this.textBoxUserName.Text = "Username";
+            this.textBoxUserName.Click += new System.EventHandler(this.textBoxUserName_Click);
+            this.textBoxUserName.Leave += new System.EventHandler(this.textBoxUserName_Leave);
             // 
             // panelLinePassword
             // 

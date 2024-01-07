@@ -274,10 +274,6 @@
       <Project>{9bd50cc3-f439-446f-a0f8-18dadc395786}</Project>
       <Name>BUS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{734eb425-8637-467c-8d5c-906e89ca1ba0}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

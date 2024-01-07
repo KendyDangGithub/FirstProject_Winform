@@ -7,3 +7,5 @@ C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\BUS\bin\Debug\DAL.dll
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\BUS\bin\Debug\DAL.pdb
 C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\BUS\bin\Debug\DTO.dll
+C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\BUS\bin\Debug\DTO.pdb

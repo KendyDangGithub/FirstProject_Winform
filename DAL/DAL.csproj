@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
-    <Compile Include="DALSinhVien.cs" />
+    <Compile Include="DALAccount.cs" />
+    <Compile Include="DALClass.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="DALStudent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
