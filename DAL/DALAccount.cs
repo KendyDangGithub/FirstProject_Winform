@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DAL
@@ -55,6 +57,30 @@ namespace DAL
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, phonenumber /*list*/});
 
             return result;
+        }
+
+        public DataTable GetAllUsernameByUS(string username)
+        {
+            string query = "select USERNAME from TAIKHOAN where username = @us";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] {username});
+        }
+
+        public int UpdatePass(string us, string pass, string sdt)
+        {
+            string query = "CapNhatThongTinTaiKhoan @Username , @Password , @Sodienthoai ";
+            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { us, pass, sdt });
+        }
+
+        public DataTable GetAllUser()
+        {
+            string query = "select id, username, sodienthoai from TAIKHOAN";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public int DeleteAccount(string us)
+        {
+            string query = "delete TAIKHOAN where USERname = @US";
+            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { us });
         }
 
     }

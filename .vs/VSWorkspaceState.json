@@ -3,8 +3,10 @@
     "",
     "\\DAL",
     "\\GUI",
-    "\\GUI\\UserControls"
+    "\\GUI\\CustomControl",
+    "\\GUI\\UserControls",
+    "\\packages"
   ],
-  "SelectedNode": "\\GUI\\fSignIn.cs",
+  "SelectedNode": "\\StudentManagerment_Project.sln",
   "PreviewInSolutionExplorer": false
 }

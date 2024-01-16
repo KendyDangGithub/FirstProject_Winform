@@ -52,9 +52,10 @@
             this.ButtonAdd = new FontAwesome.Sharp.IconButton();
             this.panelFooter = new System.Windows.Forms.Panel();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
-            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
+            this.panelSearch = new System.Windows.Forms.Panel();
+            this.textBoxValueSearch = new System.Windows.Forms.TextBox();
+            this.comboBoxColumnSearch = new System.Windows.Forms.ComboBox();
             this.ButtonSearch = new FontAwesome.Sharp.IconButton();
-            this.TextBoxSearch = new GUI.UserControls.KDTextBox();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.labelTotalPages = new System.Windows.Forms.Label();
             this.labelCurrentPage = new System.Windows.Forms.Label();
@@ -62,12 +63,15 @@
             this.buttonNext1 = new System.Windows.Forms.Button();
             this.buttonUndo1 = new System.Windows.Forms.Button();
             this.buttonUndo2 = new System.Windows.Forms.Button();
+            this.dataGridViewContent = new System.Windows.Forms.DataGridView();
             this.panelThongTin.SuspendLayout();
             this.groupBoxThongTinGV.SuspendLayout();
             this.groupBoxFunctions.SuspendLayout();
             this.panelFooter.SuspendLayout();
             this.groupBoxSearch.SuspendLayout();
+            this.panelSearch.SuspendLayout();
             this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).BeginInit();
             this.SuspendLayout();
             // 
             // panelThongTin
@@ -125,7 +129,7 @@
             this.TimePickerNgaySinh.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.TimePickerNgaySinh.BorderSize = 0;
             this.TimePickerNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimePickerNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TimePickerNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TimePickerNgaySinh.Location = new System.Drawing.Point(135, 132);
             this.TimePickerNgaySinh.MaxDate = new System.DateTime(2006, 12, 31, 0, 0, 0, 0);
             this.TimePickerNgaySinh.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
@@ -147,6 +151,7 @@
             this.comboBoxGioiTInh.Name = "comboBoxGioiTInh";
             this.comboBoxGioiTInh.Size = new System.Drawing.Size(144, 27);
             this.comboBoxGioiTInh.TabIndex = 2;
+            this.comboBoxGioiTInh.Text = "Nam ";
             // 
             // labelNgaySinh
             // 
@@ -272,7 +277,7 @@
             this.groupBoxFunctions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxFunctions.Location = new System.Drawing.Point(12, 392);
             this.groupBoxFunctions.Name = "groupBoxFunctions";
-            this.groupBoxFunctions.Size = new System.Drawing.Size(314, 353);
+            this.groupBoxFunctions.Size = new System.Drawing.Size(314, 339);
             this.groupBoxFunctions.TabIndex = 4;
             this.groupBoxFunctions.TabStop = false;
             this.groupBoxFunctions.Text = "Chức Năng";
@@ -293,6 +298,7 @@
             this.ButtonDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonDel.UseVisualStyleBackColor = false;
+            this.ButtonDel.Click += new System.EventHandler(this.ButtonDel_Click);
             // 
             // ButtonUpdate
             // 
@@ -310,6 +316,7 @@
             this.ButtonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonUpdate.UseVisualStyleBackColor = false;
+            this.ButtonUpdate.Click += new System.EventHandler(this.ButtonUpdate_Click);
             // 
             // ButtonAdd
             // 
@@ -327,6 +334,7 @@
             this.ButtonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonAdd.UseVisualStyleBackColor = false;
+            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // panelFooter
             // 
@@ -340,9 +348,9 @@
             // 
             // groupBoxSearch
             // 
-            this.groupBoxSearch.Controls.Add(this.comboBoxFilter);
+            this.groupBoxSearch.Controls.Add(this.panelSearch);
+            this.groupBoxSearch.Controls.Add(this.comboBoxColumnSearch);
             this.groupBoxSearch.Controls.Add(this.ButtonSearch);
-            this.groupBoxSearch.Controls.Add(this.TextBoxSearch);
             this.groupBoxSearch.Location = new System.Drawing.Point(158, 21);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(690, 111);
@@ -350,15 +358,41 @@
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Tìm Kiếm";
             // 
-            // comboBoxFilter
+            // panelSearch
             // 
-            this.comboBoxFilter.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFilter.FormattingEnabled = true;
-            this.comboBoxFilter.Location = new System.Drawing.Point(57, 47);
-            this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(144, 29);
-            this.comboBoxFilter.TabIndex = 6;
-            this.comboBoxFilter.Text = "Mã GV";
+            this.panelSearch.BackColor = System.Drawing.Color.Transparent;
+            this.panelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSearch.Controls.Add(this.textBoxValueSearch);
+            this.panelSearch.Location = new System.Drawing.Point(232, 35);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(180, 51);
+            this.panelSearch.TabIndex = 8;
+            // 
+            // textBoxValueSearch
+            // 
+            this.textBoxValueSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxValueSearch.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxValueSearch.Location = new System.Drawing.Point(13, 11);
+            this.textBoxValueSearch.Name = "textBoxValueSearch";
+            this.textBoxValueSearch.Size = new System.Drawing.Size(151, 29);
+            this.textBoxValueSearch.TabIndex = 6;
+            this.textBoxValueSearch.Text = "Mã GV";
+            this.textBoxValueSearch.Click += new System.EventHandler(this.textBoxValueSearch_Click);
+            this.textBoxValueSearch.Leave += new System.EventHandler(this.textBoxValueSearch_Leave);
+            // 
+            // comboBoxColumnSearch
+            // 
+            this.comboBoxColumnSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxColumnSearch.FormattingEnabled = true;
+            this.comboBoxColumnSearch.Items.AddRange(new object[] {
+            "Mã GV",
+            "Tên",
+            "Địa Chỉ"});
+            this.comboBoxColumnSearch.Location = new System.Drawing.Point(57, 47);
+            this.comboBoxColumnSearch.Name = "comboBoxColumnSearch";
+            this.comboBoxColumnSearch.Size = new System.Drawing.Size(144, 29);
+            this.comboBoxColumnSearch.TabIndex = 6;
+            this.comboBoxColumnSearch.Text = "Mã GV";
             // 
             // ButtonSearch
             // 
@@ -374,26 +408,7 @@
             this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonSearch.UseVisualStyleBackColor = true;
-            // 
-            // TextBoxSearch
-            // 
-            this.TextBoxSearch.BorderColor = System.Drawing.Color.Black;
-            this.TextBoxSearch.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.TextBoxSearch.BorderRadius = 0;
-            this.TextBoxSearch.BorderSize = 2;
-            this.TextBoxSearch.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxSearch.Location = new System.Drawing.Point(235, 38);
-            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(6);
-            this.TextBoxSearch.Multiline = false;
-            this.TextBoxSearch.Name = "TextBoxSearch";
-            this.TextBoxSearch.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.TextBoxSearch.PasswordChar = false;
-            this.TextBoxSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.TextBoxSearch.PlaceholderText = "Mã GV";
-            this.TextBoxSearch.Size = new System.Drawing.Size(175, 45);
-            this.TextBoxSearch.TabIndex = 0;
-            this.TextBoxSearch.Texts = "";
-            this.TextBoxSearch.UnderlinedStyle = false;
+            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // panelHeader
             // 
@@ -478,10 +493,26 @@
             this.buttonUndo2.Text = "<<";
             this.buttonUndo2.UseVisualStyleBackColor = false;
             // 
+            // dataGridViewContent
+            // 
+            this.dataGridViewContent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewContent.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewContent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewContent.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridViewContent.Location = new System.Drawing.Point(347, 144);
+            this.dataGridViewContent.MultiSelect = false;
+            this.dataGridViewContent.Name = "dataGridViewContent";
+            this.dataGridViewContent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewContent.Size = new System.Drawing.Size(1039, 587);
+            this.dataGridViewContent.TabIndex = 4;
+            this.dataGridViewContent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewContent_CellClick);
+            // 
             // fHoSoGiangVien
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1386, 781);
+            this.Controls.Add(this.dataGridViewContent);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.panelThongTin);
@@ -495,8 +526,11 @@
             this.groupBoxFunctions.ResumeLayout(false);
             this.panelFooter.ResumeLayout(false);
             this.groupBoxSearch.ResumeLayout(false);
+            this.panelSearch.ResumeLayout(false);
+            this.panelSearch.PerformLayout();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -532,10 +566,12 @@
         private System.Windows.Forms.GroupBox groupBoxFunctions;
         private System.Windows.Forms.GroupBox groupBoxSearch;
         private FontAwesome.Sharp.IconButton ButtonSearch;
-        private UserControls.KDTextBox TextBoxSearch;
         private FontAwesome.Sharp.IconButton ButtonDel;
         private FontAwesome.Sharp.IconButton ButtonUpdate;
         private FontAwesome.Sharp.IconButton ButtonAdd;
-        private System.Windows.Forms.ComboBox comboBoxFilter;
+        private System.Windows.Forms.ComboBox comboBoxColumnSearch;
+        private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.TextBox textBoxValueSearch;
+        private System.Windows.Forms.DataGridView dataGridViewContent;
     }
 }

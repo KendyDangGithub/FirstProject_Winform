@@ -46,18 +46,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALBranch.cs" />
     <Compile Include="ConnectionString.cs" />
     <Compile Include="DALAccount.cs" />
     <Compile Include="DALClass.cs" />
+    <Compile Include="DALLecturer.cs" />
+    <Compile Include="DALScore.cs" />
+    <Compile Include="DALSubject.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="DALStudent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{734eb425-8637-467c-8d5c-906e89ca1ba0}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

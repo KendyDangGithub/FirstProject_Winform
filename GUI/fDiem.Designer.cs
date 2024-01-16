@@ -36,28 +36,34 @@
             this.buttonUndo1 = new System.Windows.Forms.Button();
             this.buttonUndo2 = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.ButtonDel = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxSort = new System.Windows.Forms.ComboBox();
             this.comboBoxDiem = new System.Windows.Forms.ComboBox();
             this.ButtonSort = new FontAwesome.Sharp.IconButton();
+            this.ButtonUpdate = new FontAwesome.Sharp.IconButton();
+            this.ButtonAdd = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownHocKy = new System.Windows.Forms.NumericUpDown();
             this.comboBoxMonHoc = new System.Windows.Forms.ComboBox();
             this.textBoxDiemThi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxHocKy = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelMonHoc = new System.Windows.Forms.Label();
             this.textBoxMaSV = new System.Windows.Forms.TextBox();
             this.labelMaSV = new System.Windows.Forms.Label();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
+            this.comboBoxValueSearch = new System.Windows.Forms.ComboBox();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
-            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.ButtonSearch = new FontAwesome.Sharp.IconButton();
+            this.dataGridViewContent = new System.Windows.Forms.DataGridView();
             this.panelFooter.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHocKy)).BeginInit();
             this.groupBoxSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFooter
@@ -146,7 +152,10 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelHeader.Controls.Add(this.ButtonDel);
             this.panelHeader.Controls.Add(this.groupBox2);
+            this.panelHeader.Controls.Add(this.ButtonUpdate);
+            this.panelHeader.Controls.Add(this.ButtonAdd);
             this.panelHeader.Controls.Add(this.groupBox1);
             this.panelHeader.Controls.Add(this.groupBoxSearch);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Left;
@@ -155,13 +164,31 @@
             this.panelHeader.Size = new System.Drawing.Size(428, 731);
             this.panelHeader.TabIndex = 3;
             // 
+            // ButtonDel
+            // 
+            this.ButtonDel.BackColor = System.Drawing.Color.White;
+            this.ButtonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonDel.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.ButtonDel.IconColor = System.Drawing.Color.Black;
+            this.ButtonDel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonDel.IconSize = 35;
+            this.ButtonDel.Location = new System.Drawing.Point(286, 233);
+            this.ButtonDel.Name = "ButtonDel";
+            this.ButtonDel.Size = new System.Drawing.Size(120, 45);
+            this.ButtonDel.TabIndex = 9;
+            this.ButtonDel.Text = "Xóa Điểm";
+            this.ButtonDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonDel.UseVisualStyleBackColor = false;
+            this.ButtonDel.Click += new System.EventHandler(this.ButtonDel_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBoxSort);
             this.groupBox2.Controls.Add(this.comboBoxDiem);
             this.groupBox2.Controls.Add(this.ButtonSort);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(45, 487);
+            this.groupBox2.Location = new System.Drawing.Point(45, 519);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(325, 213);
             this.groupBox2.TabIndex = 7;
@@ -205,13 +232,50 @@
             this.ButtonSort.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonSort.UseVisualStyleBackColor = true;
+            this.ButtonSort.Click += new System.EventHandler(this.ButtonSort_Click);
+            // 
+            // ButtonUpdate
+            // 
+            this.ButtonUpdate.BackColor = System.Drawing.Color.White;
+            this.ButtonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonUpdate.IconChar = FontAwesome.Sharp.IconChar.Squarespace;
+            this.ButtonUpdate.IconColor = System.Drawing.Color.Black;
+            this.ButtonUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonUpdate.IconSize = 35;
+            this.ButtonUpdate.Location = new System.Drawing.Point(151, 233);
+            this.ButtonUpdate.Name = "ButtonUpdate";
+            this.ButtonUpdate.Size = new System.Drawing.Size(120, 45);
+            this.ButtonUpdate.TabIndex = 8;
+            this.ButtonUpdate.Text = "Cập Nhật";
+            this.ButtonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonUpdate.UseVisualStyleBackColor = false;
+            this.ButtonUpdate.Click += new System.EventHandler(this.ButtonUpdate_Click);
+            // 
+            // ButtonAdd
+            // 
+            this.ButtonAdd.BackColor = System.Drawing.Color.White;
+            this.ButtonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAdd.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.ButtonAdd.IconColor = System.Drawing.Color.Black;
+            this.ButtonAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonAdd.IconSize = 35;
+            this.ButtonAdd.Location = new System.Drawing.Point(15, 233);
+            this.ButtonAdd.Name = "ButtonAdd";
+            this.ButtonAdd.Size = new System.Drawing.Size(120, 45);
+            this.ButtonAdd.TabIndex = 7;
+            this.ButtonAdd.Text = "Thêm Mới";
+            this.ButtonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonAdd.UseVisualStyleBackColor = false;
+            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.numericUpDownHocKy);
             this.groupBox1.Controls.Add(this.comboBoxMonHoc);
             this.groupBox1.Controls.Add(this.textBoxDiemThi);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBoxHocKy);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.labelMonHoc);
             this.groupBox1.Controls.Add(this.textBoxMaSV);
@@ -224,10 +288,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Điểm";
             // 
+            // numericUpDownHocKy
+            // 
+            this.numericUpDownHocKy.Location = new System.Drawing.Point(130, 110);
+            this.numericUpDownHocKy.Name = "numericUpDownHocKy";
+            this.numericUpDownHocKy.Size = new System.Drawing.Size(144, 26);
+            this.numericUpDownHocKy.TabIndex = 6;
+            // 
             // comboBoxMonHoc
             // 
             this.comboBoxMonHoc.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMonHoc.FormattingEnabled = true;
+            this.comboBoxMonHoc.ItemHeight = 21;
             this.comboBoxMonHoc.Location = new System.Drawing.Point(130, 71);
             this.comboBoxMonHoc.Name = "comboBoxMonHoc";
             this.comboBoxMonHoc.Size = new System.Drawing.Size(144, 29);
@@ -251,13 +323,6 @@
             this.label1.Text = "Điểm Thi:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBoxHocKy
-            // 
-            this.textBoxHocKy.Location = new System.Drawing.Point(130, 109);
-            this.textBoxHocKy.Name = "textBoxHocKy";
-            this.textBoxHocKy.Size = new System.Drawing.Size(144, 26);
-            this.textBoxHocKy.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -273,9 +338,9 @@
             this.labelMonHoc.AutoSize = true;
             this.labelMonHoc.Location = new System.Drawing.Point(44, 75);
             this.labelMonHoc.Name = "labelMonHoc";
-            this.labelMonHoc.Size = new System.Drawing.Size(71, 19);
+            this.labelMonHoc.Size = new System.Drawing.Size(72, 19);
             this.labelMonHoc.TabIndex = 2;
-            this.labelMonHoc.Text = "Môn Học:";
+            this.labelMonHoc.Text = "Học Phần:";
             this.labelMonHoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxMaSV
@@ -297,36 +362,43 @@
             // 
             // groupBoxSearch
             // 
+            this.groupBoxSearch.Controls.Add(this.comboBoxValueSearch);
             this.groupBoxSearch.Controls.Add(this.comboBoxSearch);
-            this.groupBoxSearch.Controls.Add(this.comboBoxFilter);
             this.groupBoxSearch.Controls.Add(this.ButtonSearch);
             this.groupBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxSearch.Location = new System.Drawing.Point(45, 276);
+            this.groupBoxSearch.Location = new System.Drawing.Point(45, 304);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(325, 186);
             this.groupBoxSearch.TabIndex = 2;
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Tìm Kiếm";
             // 
+            // comboBoxValueSearch
+            // 
+            this.comboBoxValueSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxValueSearch.FormattingEnabled = true;
+            this.comboBoxValueSearch.ItemHeight = 21;
+            this.comboBoxValueSearch.Location = new System.Drawing.Point(68, 72);
+            this.comboBoxValueSearch.Name = "comboBoxValueSearch";
+            this.comboBoxValueSearch.Size = new System.Drawing.Size(180, 29);
+            this.comboBoxValueSearch.TabIndex = 6;
+            this.comboBoxValueSearch.Text = "WindowsForm";
+            // 
             // comboBoxSearch
             // 
             this.comboBoxSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSearch.FormattingEnabled = true;
-            this.comboBoxSearch.Location = new System.Drawing.Point(68, 72);
+            this.comboBoxSearch.ItemHeight = 21;
+            this.comboBoxSearch.Items.AddRange(new object[] {
+            "Môn Học",
+            "Lớp",
+            "Mã Sinh Viên"});
+            this.comboBoxSearch.Location = new System.Drawing.Point(68, 36);
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(180, 29);
             this.comboBoxSearch.TabIndex = 6;
-            this.comboBoxSearch.Text = "WindowsForm";
-            // 
-            // comboBoxFilter
-            // 
-            this.comboBoxFilter.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFilter.FormattingEnabled = true;
-            this.comboBoxFilter.Location = new System.Drawing.Point(68, 36);
-            this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(180, 29);
-            this.comboBoxFilter.TabIndex = 6;
-            this.comboBoxFilter.Text = "Môn Học";
+            this.comboBoxSearch.Text = "Môn Học";
+            this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
             // 
             // ButtonSearch
             // 
@@ -342,12 +414,27 @@
             this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonSearch.UseVisualStyleBackColor = true;
+            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
+            // 
+            // dataGridViewContent
+            // 
+            this.dataGridViewContent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewContent.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewContent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewContent.Location = new System.Drawing.Point(428, 0);
+            this.dataGridViewContent.Name = "dataGridViewContent";
+            this.dataGridViewContent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewContent.Size = new System.Drawing.Size(958, 731);
+            this.dataGridViewContent.TabIndex = 5;
+            this.dataGridViewContent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewContent_CellClick);
             // 
             // fDiem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1386, 781);
+            this.Controls.Add(this.dataGridViewContent);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelFooter);
             this.Name = "fDiem";
@@ -359,7 +446,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHocKy)).EndInit();
             this.groupBoxSearch.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,14 +470,18 @@
         private System.Windows.Forms.ComboBox comboBoxMonHoc;
         private System.Windows.Forms.TextBox textBoxDiemThi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxHocKy;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelMonHoc;
         private System.Windows.Forms.TextBox textBoxMaSV;
         private System.Windows.Forms.Label labelMaSV;
         private System.Windows.Forms.GroupBox groupBoxSearch;
+        private System.Windows.Forms.ComboBox comboBoxValueSearch;
         private System.Windows.Forms.ComboBox comboBoxSearch;
-        private System.Windows.Forms.ComboBox comboBoxFilter;
         private FontAwesome.Sharp.IconButton ButtonSearch;
+        private System.Windows.Forms.DataGridView dataGridViewContent;
+        private FontAwesome.Sharp.IconButton ButtonDel;
+        private FontAwesome.Sharp.IconButton ButtonAdd;
+        private FontAwesome.Sharp.IconButton ButtonUpdate;
+        private System.Windows.Forms.NumericUpDown numericUpDownHocKy;
     }
 }

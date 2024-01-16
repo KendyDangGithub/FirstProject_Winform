@@ -14,6 +14,7 @@ namespace GUI
 {
     public partial class fSignIn : Form
     {
+        public string LoggedInUsername { get; private set; }
         public fSignIn()
         {
             InitializeComponent();
@@ -34,10 +35,11 @@ namespace GUI
         public event EventHandler LoginRequested;
         private void buttonLOGIN_Click(object sender, EventArgs e)
         {
-            string userName = textBoxUserName.Text;
+            string username = textBoxUserName.Text;
             string password = textBoxPassword.Text;
-            if (isLogin(userName, password))
+            if (isLogin(username, password))
             {
+                LoggedInUsername = username;
                 LoginRequested?.Invoke(this, EventArgs.Empty);
 
             }

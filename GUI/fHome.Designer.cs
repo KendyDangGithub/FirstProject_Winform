@@ -41,12 +41,9 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelAccount = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.labelUserName = new System.Windows.Forms.Label();
-            this.PictureBoxLogoAccount = new GUI.UserControls.KDCircularPictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.PictureBoxLogo = new GUI.UserControls.KDCircularPictureBox();
             this.flowLayoutPaneSideMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.ButtonHoSo = new FontAwesome.Sharp.IconButton();
             this.ButtonQuanLy = new FontAwesome.Sharp.IconButton();
@@ -54,17 +51,19 @@
             this.ButtonBaoCao = new FontAwesome.Sharp.IconButton();
             this.panelContent = new System.Windows.Forms.Panel();
             this.pictureBoxContent = new System.Windows.Forms.PictureBox();
+            this.PictureBoxLogoAccount = new GUI.UserControls.KDCircularPictureBox();
+            this.PictureBoxLogo = new GUI.UserControls.KDCircularPictureBox();
             this.flowLayoutPanelHoSo.SuspendLayout();
             this.flowLayoutPanelQuanLy.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.panelAccount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogoAccount)).BeginInit();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.flowLayoutPaneSideMenu.SuspendLayout();
             this.panelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogoAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelHoSo
@@ -131,7 +130,7 @@
             this.flowLayoutPanelQuanLy.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelQuanLy.Name = "flowLayoutPanelQuanLy";
             this.flowLayoutPanelQuanLy.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.flowLayoutPanelQuanLy.Size = new System.Drawing.Size(198, 239);
+            this.flowLayoutPanelQuanLy.Size = new System.Drawing.Size(198, 220);
             this.flowLayoutPanelQuanLy.TabIndex = 10;
             // 
             // ButtonDiem
@@ -175,6 +174,8 @@
             this.ButtonLopHoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonLopHoc.UseVisualStyleBackColor = false;
             this.ButtonLopHoc.Click += new System.EventHandler(this.ButtonLopHoc_Click);
+            this.ButtonLopHoc.MouseEnter += new System.EventHandler(this.ButtonLopHoc_MouseEnter);
+            this.ButtonLopHoc.MouseLeave += new System.EventHandler(this.ButtonLopHoc_MouseLeave);
             // 
             // ButtonHocPhan
             // 
@@ -189,7 +190,7 @@
             this.ButtonHocPhan.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonHocPhan.Name = "ButtonHocPhan";
             this.ButtonHocPhan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.ButtonHocPhan.Size = new System.Drawing.Size(197, 55);
+            this.ButtonHocPhan.Size = new System.Drawing.Size(200, 55);
             this.ButtonHocPhan.TabIndex = 3;
             this.ButtonHocPhan.Text = "Học Phần";
             this.ButtonHocPhan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,10 +209,10 @@
             this.ButtonChuyenNganh.IconColor = System.Drawing.Color.Black;
             this.ButtonChuyenNganh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ButtonChuyenNganh.Location = new System.Drawing.Point(0, 165);
-            this.ButtonChuyenNganh.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.ButtonChuyenNganh.Margin = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.ButtonChuyenNganh.Name = "ButtonChuyenNganh";
             this.ButtonChuyenNganh.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.ButtonChuyenNganh.Size = new System.Drawing.Size(197, 55);
+            this.ButtonChuyenNganh.Size = new System.Drawing.Size(200, 55);
             this.ButtonChuyenNganh.TabIndex = 4;
             this.ButtonChuyenNganh.Text = "Chuyên Ngành";
             this.ButtonChuyenNganh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,7 +246,6 @@
             // 
             this.panelAccount.BackColor = System.Drawing.SystemColors.Highlight;
             this.panelAccount.Controls.Add(this.iconButton1);
-            this.panelAccount.Controls.Add(this.linkLabel1);
             this.panelAccount.Controls.Add(this.labelUserName);
             this.panelAccount.Controls.Add(this.PictureBoxLogoAccount);
             this.panelAccount.Location = new System.Drawing.Point(1129, 0);
@@ -258,54 +258,26 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.Location = new System.Drawing.Point(190, 17);
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(194, 14);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(64, 58);
+            this.iconButton1.Size = new System.Drawing.Size(51, 54);
             this.iconButton1.TabIndex = 1;
             this.iconButton1.Text = "Thoát";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.ForeColor = System.Drawing.Color.White;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Tomato;
-            this.linkLabel1.Location = new System.Drawing.Point(85, 55);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(93, 17);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Đổi Mật Khẩu";
-            // 
             // labelUserName
             // 
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUserName.ForeColor = System.Drawing.Color.White;
-            this.labelUserName.Location = new System.Drawing.Point(83, 18);
+            this.labelUserName.Location = new System.Drawing.Point(107, 54);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(92, 27);
+            this.labelUserName.Size = new System.Drawing.Size(77, 27);
             this.labelUserName.TabIndex = 3;
-            this.labelUserName.Text = "ADMIN";
-            // 
-            // PictureBoxLogoAccount
-            // 
-            this.PictureBoxLogoAccount.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.PictureBoxLogoAccount.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.PictureBoxLogoAccount.BorderColor2 = System.Drawing.Color.HotPink;
-            this.PictureBoxLogoAccount.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.PictureBoxLogoAccount.BorderSize = 2;
-            this.PictureBoxLogoAccount.GradientAngle = 50F;
-            this.PictureBoxLogoAccount.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogoAccount.Image")));
-            this.PictureBoxLogoAccount.Location = new System.Drawing.Point(19, 11);
-            this.PictureBoxLogoAccount.Name = "PictureBoxLogoAccount";
-            this.PictureBoxLogoAccount.Size = new System.Drawing.Size(60, 60);
-            this.PictureBoxLogoAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBoxLogoAccount.TabIndex = 2;
-            this.PictureBoxLogoAccount.TabStop = false;
+            this.labelUserName.Text = "Admin";
             // 
             // labelTitle
             // 
@@ -328,23 +300,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(197, 80);
             this.panelLogo.TabIndex = 2;
-            // 
-            // PictureBoxLogo
-            // 
-            this.PictureBoxLogo.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.PictureBoxLogo.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.PictureBoxLogo.BorderColor2 = System.Drawing.Color.HotPink;
-            this.PictureBoxLogo.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.PictureBoxLogo.BorderSize = 2;
-            this.PictureBoxLogo.GradientAngle = 50F;
-            this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
-            this.PictureBoxLogo.Location = new System.Drawing.Point(60, 3);
-            this.PictureBoxLogo.Name = "PictureBoxLogo";
-            this.PictureBoxLogo.Size = new System.Drawing.Size(77, 77);
-            this.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBoxLogo.TabIndex = 0;
-            this.PictureBoxLogo.TabStop = false;
-            this.PictureBoxLogo.Click += new System.EventHandler(this.kdCircularPictureBox1_Click);
             // 
             // flowLayoutPaneSideMenu
             // 
@@ -425,7 +380,7 @@
             this.ButtonThongKe.IconColor = System.Drawing.Color.Black;
             this.ButtonThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ButtonThongKe.IconSize = 40;
-            this.ButtonThongKe.Location = new System.Drawing.Point(0, 503);
+            this.ButtonThongKe.Location = new System.Drawing.Point(0, 484);
             this.ButtonThongKe.Margin = new System.Windows.Forms.Padding(0, 6, 0, 3);
             this.ButtonThongKe.Name = "ButtonThongKe";
             this.ButtonThongKe.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
@@ -446,16 +401,17 @@
             this.ButtonBaoCao.FlatAppearance.BorderSize = 0;
             this.ButtonBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonBaoCao.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonBaoCao.IconChar = FontAwesome.Sharp.IconChar.EnvelopeOpen;
+            this.ButtonBaoCao.IconChar = FontAwesome.Sharp.IconChar.UserLock;
             this.ButtonBaoCao.IconColor = System.Drawing.Color.Black;
             this.ButtonBaoCao.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonBaoCao.IconSize = 40;
-            this.ButtonBaoCao.Location = new System.Drawing.Point(3, 572);
+            this.ButtonBaoCao.IconSize = 35;
+            this.ButtonBaoCao.Location = new System.Drawing.Point(0, 553);
+            this.ButtonBaoCao.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.ButtonBaoCao.Name = "ButtonBaoCao";
             this.ButtonBaoCao.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.ButtonBaoCao.Size = new System.Drawing.Size(197, 63);
             this.ButtonBaoCao.TabIndex = 12;
-            this.ButtonBaoCao.Text = "Báo Cáo";
+            this.ButtonBaoCao.Text = "Tài Khoản";
             this.ButtonBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonBaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonBaoCao.UseMnemonic = false;
@@ -486,6 +442,39 @@
             this.pictureBoxContent.TabIndex = 0;
             this.pictureBoxContent.TabStop = false;
             // 
+            // PictureBoxLogoAccount
+            // 
+            this.PictureBoxLogoAccount.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PictureBoxLogoAccount.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.PictureBoxLogoAccount.BorderColor2 = System.Drawing.Color.HotPink;
+            this.PictureBoxLogoAccount.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PictureBoxLogoAccount.BorderSize = 2;
+            this.PictureBoxLogoAccount.GradientAngle = 50F;
+            this.PictureBoxLogoAccount.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogoAccount.Image")));
+            this.PictureBoxLogoAccount.Location = new System.Drawing.Point(117, 3);
+            this.PictureBoxLogoAccount.Name = "PictureBoxLogoAccount";
+            this.PictureBoxLogoAccount.Size = new System.Drawing.Size(50, 50);
+            this.PictureBoxLogoAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxLogoAccount.TabIndex = 2;
+            this.PictureBoxLogoAccount.TabStop = false;
+            // 
+            // PictureBoxLogo
+            // 
+            this.PictureBoxLogo.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PictureBoxLogo.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.PictureBoxLogo.BorderColor2 = System.Drawing.Color.HotPink;
+            this.PictureBoxLogo.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PictureBoxLogo.BorderSize = 2;
+            this.PictureBoxLogo.GradientAngle = 50F;
+            this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
+            this.PictureBoxLogo.Location = new System.Drawing.Point(60, 3);
+            this.PictureBoxLogo.Name = "PictureBoxLogo";
+            this.PictureBoxLogo.Size = new System.Drawing.Size(77, 77);
+            this.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxLogo.TabIndex = 0;
+            this.PictureBoxLogo.TabStop = false;
+            this.PictureBoxLogo.Click += new System.EventHandler(this.kdCircularPictureBox1_Click);
+            // 
             // fHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -497,6 +486,7 @@
             this.Controls.Add(this.panelHeader);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -509,12 +499,12 @@
             this.panelTitle.PerformLayout();
             this.panelAccount.ResumeLayout(false);
             this.panelAccount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogoAccount)).EndInit();
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
             this.flowLayoutPaneSideMenu.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogoAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,7 +532,6 @@
         private System.Windows.Forms.Label labelUserName;
         private UserControls.KDCircularPictureBox PictureBoxLogoAccount;
         private System.Windows.Forms.Panel panelAccount;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton ButtonLopHoc;
     }

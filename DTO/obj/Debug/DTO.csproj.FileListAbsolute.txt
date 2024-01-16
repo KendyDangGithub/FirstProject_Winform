@@ -1,6 +1,0 @@
-C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\DTO\bin\Debug\DTO.dll
-C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\DTO\bin\Debug\DTO.pdb
-C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
-C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\DTO\obj\Debug\DTO.dll
-C:\Users\KendyDang\OneDrive\Máy tính\UTEHY\Kỳ 3\C# Winform\Bài Tập Lớn\StudentManagerment_Project\DTO\obj\Debug\DTO.pdb

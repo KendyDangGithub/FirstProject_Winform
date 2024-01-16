@@ -30,6 +30,7 @@
         {
             this.panelThongTin = new System.Windows.Forms.Panel();
             this.groupBoxThongTinSV = new System.Windows.Forms.GroupBox();
+            this.TimePickerBirthday = new GUI.UserControls.KDDateTimePicker();
             this.groupBoxChiTiet = new System.Windows.Forms.GroupBox();
             this.comboBoxLop = new System.Windows.Forms.ComboBox();
             this.comboBoxHDT = new System.Windows.Forms.ComboBox();
@@ -40,6 +41,7 @@
             this.labelHDT = new System.Windows.Forms.Label();
             this.textBoxNienKhoa = new System.Windows.Forms.TextBox();
             this.groupBoxNguoiThan = new System.Windows.Forms.GroupBox();
+            this.TimePickerBirthdayNT = new GUI.UserControls.KDDateTimePicker();
             this.textBoxPhoneNT = new System.Windows.Forms.TextBox();
             this.labelPhoneNT = new System.Windows.Forms.Label();
             this.labelBirthdayNT = new System.Windows.Forms.Label();
@@ -80,8 +82,6 @@
             this.ButtonUpdate = new FontAwesome.Sharp.IconButton();
             this.ButtonAdd = new FontAwesome.Sharp.IconButton();
             this.dataGridViewContent = new System.Windows.Forms.DataGridView();
-            this.TimePickerBirthday = new GUI.UserControls.KDDateTimePicker();
-            this.TimePickerBirthdayNT = new GUI.UserControls.KDDateTimePicker();
             this.panelThongTin.SuspendLayout();
             this.groupBoxThongTinSV.SuspendLayout();
             this.groupBoxChiTiet.SuspendLayout();
@@ -132,6 +132,20 @@
             this.groupBoxThongTinSV.TabIndex = 0;
             this.groupBoxThongTinSV.TabStop = false;
             this.groupBoxThongTinSV.Text = "Thông Tin Sinh VIên";
+            // 
+            // TimePickerBirthday
+            // 
+            this.TimePickerBirthday.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.TimePickerBirthday.BorderSize = 0;
+            this.TimePickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.TimePickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TimePickerBirthday.Location = new System.Drawing.Point(133, 155);
+            this.TimePickerBirthday.MinimumSize = new System.Drawing.Size(0, 35);
+            this.TimePickerBirthday.Name = "TimePickerBirthday";
+            this.TimePickerBirthday.Size = new System.Drawing.Size(136, 35);
+            this.TimePickerBirthday.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.TimePickerBirthday.TabIndex = 5;
+            this.TimePickerBirthday.TextColor = System.Drawing.Color.White;
             // 
             // groupBoxChiTiet
             // 
@@ -243,6 +257,23 @@
             this.groupBoxNguoiThan.TabStop = false;
             this.groupBoxNguoiThan.Text = "Người Thân";
             // 
+            // TimePickerBirthdayNT
+            // 
+            this.TimePickerBirthdayNT.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.TimePickerBirthdayNT.BorderSize = 0;
+            this.TimePickerBirthdayNT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimePickerBirthdayNT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TimePickerBirthdayNT.Location = new System.Drawing.Point(122, 116);
+            this.TimePickerBirthdayNT.MaxDate = new System.DateTime(2006, 12, 31, 0, 0, 0, 0);
+            this.TimePickerBirthdayNT.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.TimePickerBirthdayNT.MinimumSize = new System.Drawing.Size(0, 35);
+            this.TimePickerBirthdayNT.Name = "TimePickerBirthdayNT";
+            this.TimePickerBirthdayNT.Size = new System.Drawing.Size(142, 35);
+            this.TimePickerBirthdayNT.SkinColor = System.Drawing.Color.White;
+            this.TimePickerBirthdayNT.TabIndex = 6;
+            this.TimePickerBirthdayNT.TextColor = System.Drawing.Color.Black;
+            this.TimePickerBirthdayNT.Value = new System.DateTime(2004, 8, 19, 0, 0, 0, 0);
+            // 
             // textBoxPhoneNT
             // 
             this.textBoxPhoneNT.Location = new System.Drawing.Point(122, 85);
@@ -328,7 +359,7 @@
             // 
             // textBoxDanToc
             // 
-            this.textBoxDanToc.Location = new System.Drawing.Point(135, 124);
+            this.textBoxDanToc.Location = new System.Drawing.Point(135, 123);
             this.textBoxDanToc.Name = "textBoxDanToc";
             this.textBoxDanToc.Size = new System.Drawing.Size(134, 26);
             this.textBoxDanToc.TabIndex = 1;
@@ -575,7 +606,6 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(151, 29);
             this.textBoxSearch.TabIndex = 6;
-            this.textBoxSearch.Text = "Mã SV";
             this.textBoxSearch.Click += new System.EventHandler(this.textBoxSearch_Click_1);
             this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
             // 
@@ -593,6 +623,7 @@
             this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonSearch.UseVisualStyleBackColor = true;
+            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // comboBoxSearchBy
             // 
@@ -626,6 +657,7 @@
             this.ButtonDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonDel.UseVisualStyleBackColor = false;
+            this.ButtonDel.Click += new System.EventHandler(this.ButtonDel_Click);
             // 
             // ButtonUpdate
             // 
@@ -643,6 +675,7 @@
             this.ButtonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonUpdate.UseVisualStyleBackColor = false;
+            this.ButtonUpdate.Click += new System.EventHandler(this.ButtonUpdate_Click);
             // 
             // ButtonAdd
             // 
@@ -669,43 +702,12 @@
             this.dataGridViewContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewContent.GridColor = System.Drawing.Color.Black;
             this.dataGridViewContent.Location = new System.Drawing.Point(281, 211);
+            this.dataGridViewContent.MultiSelect = false;
             this.dataGridViewContent.Name = "dataGridViewContent";
+            this.dataGridViewContent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewContent.Size = new System.Drawing.Size(1105, 520);
             this.dataGridViewContent.TabIndex = 4;
-            // 
-            // TimePickerBirthday
-            // 
-            this.TimePickerBirthday.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.TimePickerBirthday.BorderSize = 0;
-            this.TimePickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimePickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimePickerBirthday.Location = new System.Drawing.Point(135, 153);
-            this.TimePickerBirthday.MaxDate = new System.DateTime(2006, 12, 31, 0, 0, 0, 0);
-            this.TimePickerBirthday.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.TimePickerBirthday.MinimumSize = new System.Drawing.Size(0, 35);
-            this.TimePickerBirthday.Name = "TimePickerBirthday";
-            this.TimePickerBirthday.Size = new System.Drawing.Size(134, 35);
-            this.TimePickerBirthday.SkinColor = System.Drawing.Color.White;
-            this.TimePickerBirthday.TabIndex = 5;
-            this.TimePickerBirthday.TextColor = System.Drawing.Color.Black;
-            this.TimePickerBirthday.Value = new System.DateTime(2004, 8, 19, 0, 0, 0, 0);
-            // 
-            // TimePickerBirthdayNT
-            // 
-            this.TimePickerBirthdayNT.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.TimePickerBirthdayNT.BorderSize = 0;
-            this.TimePickerBirthdayNT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimePickerBirthdayNT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimePickerBirthdayNT.Location = new System.Drawing.Point(122, 116);
-            this.TimePickerBirthdayNT.MaxDate = new System.DateTime(2006, 12, 31, 0, 0, 0, 0);
-            this.TimePickerBirthdayNT.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.TimePickerBirthdayNT.MinimumSize = new System.Drawing.Size(0, 35);
-            this.TimePickerBirthdayNT.Name = "TimePickerBirthdayNT";
-            this.TimePickerBirthdayNT.Size = new System.Drawing.Size(142, 35);
-            this.TimePickerBirthdayNT.SkinColor = System.Drawing.Color.White;
-            this.TimePickerBirthdayNT.TabIndex = 6;
-            this.TimePickerBirthdayNT.TextColor = System.Drawing.Color.Black;
-            this.TimePickerBirthdayNT.Value = new System.DateTime(2004, 8, 19, 0, 0, 0, 0);
+            this.dataGridViewContent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewContent_CellClick);
             // 
             // fHoSoSinhVien
             // 
@@ -781,7 +783,6 @@
         private FontAwesome.Sharp.IconButton ButtonUpdate;
         private FontAwesome.Sharp.IconButton ButtonAdd;
         private System.Windows.Forms.GroupBox groupBoxSearch;
-        private UserControls.KDDateTimePicker TimePickerBirthday;
         private UserControls.KDDateTimePicker TimePickerBirthdayNT;
         private System.Windows.Forms.Label labelTotalPages;
         private System.Windows.Forms.Label labelCurrentPage;
@@ -794,5 +795,6 @@
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Panel panelSearch;
+        private UserControls.KDDateTimePicker TimePickerBirthday;
     }
 }

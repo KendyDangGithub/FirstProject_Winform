@@ -22,7 +22,6 @@ namespace GUI
             hideSubMenu();
             ShowUserControls(new UCHome());
 
-
         }
         private void hideSubMenu()
         {
@@ -248,14 +247,14 @@ namespace GUI
         {
             labelTitle.Text = ButtonBaoCao.Text;
             CenterLabel(labelTitle);
-            openChildFormInPanel(new fBaoCao());
+            openChildFormInPanel(new fTaiKhoan());
         }
 
         private void ButtonLopHoc_Click(object sender, EventArgs e)
         {
             labelTitle.Text = ButtonQuanLy.Text + " " + ButtonLopHoc.Text;
             CenterLabel(labelTitle);
-            openChildFormInPanel(new fChuyenNganh());
+            openChildFormInPanel(new fLopHoc());
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -282,6 +281,18 @@ namespace GUI
             {
                 Environment.Exit(0);
             }
+        }
+
+        private void ButtonLopHoc_MouseEnter(object sender, EventArgs e)
+        {
+            ButtonLopHoc.BackColor = Color.DeepSkyBlue;
+
+        }
+
+        private void ButtonLopHoc_MouseLeave(object sender, EventArgs e)
+        {
+            ButtonLopHoc.BackColor = Color.Silver;
+
         }
     }
 }

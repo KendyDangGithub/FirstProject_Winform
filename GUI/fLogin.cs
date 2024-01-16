@@ -83,7 +83,6 @@ namespace GUI
 
         private void FormSignIn_LoginRequested(object sender, EventArgs e)
         {
-
             this.Hide();
             formHome.Show();
         }

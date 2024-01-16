@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.ucSignIn1 = new GUI.UserControls.UCSignIn();
             this.panelWelcome = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,21 +57,10 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.ucSignIn1);
             this.panel4.Location = new System.Drawing.Point(0, 51);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(630, 630);
             this.panel4.TabIndex = 8;
-            // 
-            // ucSignIn1
-            // 
-            this.ucSignIn1.BackColor = System.Drawing.Color.White;
-            this.ucSignIn1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucSignIn1.Location = new System.Drawing.Point(122, 264);
-            this.ucSignIn1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucSignIn1.Name = "ucSignIn1";
-            this.ucSignIn1.Size = new System.Drawing.Size(628, 625);
-            this.ucSignIn1.TabIndex = 0;
             // 
             // panelWelcome
             // 
@@ -162,6 +150,9 @@
             this.panelLogin.Size = new System.Drawing.Size(628, 630);
             this.panelLogin.TabIndex = 8;
             // 
+            // ucSignIn1
+            // 
+            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -174,6 +165,7 @@
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.buttonSignIn);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -199,7 +191,6 @@
         private System.Windows.Forms.Button buttonSignUp;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private UserControls.UCSignIn ucSignIn1;
         public System.Windows.Forms.Panel panelLogin;
     }
 }
